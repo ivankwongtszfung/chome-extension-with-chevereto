@@ -1,12 +1,32 @@
 {
   "manifest_version": 2,
 
-  "name": "Getting started example",
-  "description": "This extension allows the user to change the background color of the current page.",
+  "name": "My first chrome extension",
+  "description": "chrome extension with chevereto",
   "version": "1.0",
 
   "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
-  }
+    "default_title":"chevereto extension",
+    "default_icon": "popup/icon.png",
+    "default_popup": "popup/popup.html"
+  },
+  "options_ui": {
+    "page":"option/options.html",
+    "chrome_style": true
+  },
+  "background":{
+    "scripts":["background/background.js"]
+  },
+  "icons":{
+    "16":"popup/icon.png"
+  },
+  "permissions":["tabs","contextMenus","storage"],
+  "content_scripts":[
+    //object of css js and matches
+    {
+      "matches": ["*://*/*"],
+      "css": ["content/mystyle.css"],
+      "js": ["js/jquery.min.js", "content/myscript.js"]
+    }
+  ]
 }
