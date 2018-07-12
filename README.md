@@ -1,3 +1,11 @@
-"# chome-extension-with-chevereto" 
+# chome-extension-with-chevereto
+This is a chrome extension to enhance the functionality of chevereto photo editing page with Camanjs
+We inject the scrWpt to the chevereto page to obtain the 
+## prerequiste
 
-i make a camera button to open edit page
+We add all the functionality based on the chevereto-free open source project
+[Chevereto-Free](https://chevereto.com/free)
+
+## Functionality
+[X] photo editing using CamanJS
+[X] upload photo via the extension
