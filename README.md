@@ -7,5 +7,5 @@ We add all the functionality based on the chevereto-free open source project
 [Chevereto-Free](https://chevereto.com/free)
 
 ## Functionality
-[X] photo editing using CamanJS
-[X] upload photo via the extension
+- [X] photo editing using CamanJS
+- [X] upload photo via the extension
