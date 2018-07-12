@@ -1,0 +1,48 @@
+
+
+
+.myedit{
+	top: 39px;
+    font-size: 9px !important;
+}
+@media (min-width: 768px){
+	#fullscreen-modal-body .myCol {
+		width: 30%;
+		display:inline-block;
+	}
+}
+
+
+#PresetFilters a:active {
+    -webkit-box-shadow: inset 1px 1px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 1px 1px 3px rgba(0,0,0,0.3);
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.3);
+}
+#PresetFilters a:hover {
+    background-color: #4b96d7;
+}
+#PresetFilters a {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: background-color .3s ease-out;
+    -moz-transition: background-color .3s ease-out;
+    transition: background-color .3s ease-out;
+    background-color: #368ad2;
+    display: inline-block;
+    text-align: center;
+    padding: 8px 10px;
+    color: #f8f8f2;
+    margin: 5px;
+    border: none;
+    font-size: 13px;
+    width: 120px;
+    cursor: pointer;
+}
+
+#PresetFilters a.Active {
+    -webkit-box-shadow: inset 1px 1px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 1px 1px 3px rgba(0,0,0,0.3);
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.3);
+    background-color: #e69751;
+}

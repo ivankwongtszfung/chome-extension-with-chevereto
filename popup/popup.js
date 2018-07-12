@@ -4,14 +4,20 @@ $( document ).ready(function() {
 	$("#setting").bind("click",function(){
 		chrome.runtime.openOptionsPage();
 	});
+	$('#uploadPhoto').bind("click",function(){
+		chrome.runtime.sendMessage({method:"getStatus"},function(response){
+			console.log(chrome.runtime.lastError);
+		})
+	});
 	$("#uploadQueue").bind("click",function(){
 		chrome.storage.sync.get(["imageQ"], function(result) {
 			console.log(result);
 			//reset the dropdownQueue
-			$("#dropdownQueue").append("");
+			$("#dropdownQueue").html("");
 			let data = result['imageQ'];
+
 			$.each(data,function(index,value){
-				let dropdownData = '<a class="dropdown-item" href="#">'+value+'</a>'
+				dropdownData = '<a class="dropdown-item">'+value+'</a>'
 				$("#dropdownQueue").append(dropdownData);
 				
 				
@@ -61,15 +67,15 @@ function testConnect(){
 		var t0 = performance.now();
 		var port = chrome.tabs.connect(tabs[0].id);
 		port.postMessage({counter: 1});
-		port.onMessage.addListener(function getResp(response) {
-			if (response.counter < 1000) {
-				port.postMessage({counter: response.counter});
-			} else {
-				var t1 = performance.now();
-				var msec = Math.round((t1 - t0));
-				$("#resultsConnect").text(msec + "msec");
+		// port.onMessage.addListener(function getResp(response) {
+		// 	if (response.counter < 1000) {
+		// 		port.postMessage({counter: response.counter});
+		// 	} else {
+		// 		var t1 = performance.now();
+		// 		var msec = Math.round((t1 - t0));
+		// 		$("#resultsConnect").text(msec + "msec");
 	
-			}
-		});
+		// 	}
+		// });
 	});
 }

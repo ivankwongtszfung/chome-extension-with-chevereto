@@ -3,6 +3,7 @@
 <head>
 	<title>Title of the document</title>
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="popup.css">
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/jquery-ui.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
@@ -10,16 +11,17 @@
 </head>
 
 <body>
+   <div id="container">
 	<table>
 		<tr>
 			<td><button id="uploadPhoto" class="btn btn-info btn-lg">Upload To Chevereto</button></td>
 		</tr>
 		<tr>
 			<td>
-			<div class="dropdown">
-			<button id="uploadQueue" class="btn btn-info btn-lg dropdown-toggle" aria-expanded="false" data-toggle="dropdown">Show Upload Queue</button>
-			<div class="dropdown-menu" id="dropdownQueue" aria-labelledby="uploadQueue">
-			</div>
+			<div id="dropdown" class="dropdown">
+				<button id="uploadQueue" class="btn btn-info btn-lg dropdown-toggle" aria-expanded="false" data-toggle="dropdown">Show Upload Queue</button>
+				<div class="dropdown-menu" id="dropdownQueue" aria-labelledby="uploadQueue">
+				</div>
 			</div>
 			</td>
 		</tr>
@@ -29,36 +31,9 @@
 		<tr>
 			<td><button id="uploadQueueReset" class="btn btn-info btn-lg">upload Queue Reset</button></td>
 		</tr>
-		<tr>
-			<td><button id="testMessage">Measure sendMessage</button></td>
-			<td id="resultsMessage" class="results">(results)</td>
-		</tr>
-		<tr>
-			<td><button id="testConnect">Measure postMessage</button></td>
-			<td id="resultsConnect" class="results">(results)</td>
-		</tr>
-		<tr>
-			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-		</tr>
+		
 	</table>
-	<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
+
   </div>
   
 

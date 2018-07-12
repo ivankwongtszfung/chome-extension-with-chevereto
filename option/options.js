@@ -1,5 +1,11 @@
 $(document).ready(function(){
 	var successFlag = 0;
+	chrome.storage.sync.get(["hostname"], function(result){
+		if(!result){
+			return
+		}
+		$("#hostname").val(result['hostname']);
+	});
 	$("#save").bind("click",function(){
 	let hostname=$("#hostname").val();
 	if (!hostname) {
@@ -16,4 +22,4 @@ $(document).ready(function(){
 		setTimeout(function(){window.close()},3000) 
 		});
 	});
-	});
+});

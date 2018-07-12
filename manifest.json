@@ -15,18 +15,25 @@
     "chrome_style": true
   },
   "background":{
-    "scripts":["background/background.js"]
+    "persistent": true,
+    "scripts":["js/jquery.min.js","background/background.js"]
   },
   "icons":{
     "16":"popup/icon.png"
   },
-  "permissions":["tabs","contextMenus","storage"],
+  "permissions":["tabs","contextMenus","storage","http://*/","https://*/"],
   "content_scripts":[
     //object of css js and matches
     {
       "matches": ["*://*/*"],
       "css": ["content/mystyle.css"],
-      "js": ["js/jquery.min.js", "content/myscript.js"]
+      "js": ["js/jquery.min.js"]
+    },
+    {
+      "matches": ["*://*/*Chevereto*","*://*/*chevereto*","*://*/*chromeExtension*","*://localhost/*"],
+      "css": ["content/photoEdit.css"],
+      "js": ["js/jquery.min.js" ,"content/photoEdit.js"]
     }
-  ]
+  ],
+  "web_accessible_resources": ["js/caman.full.min.js","popup/script.js","popup/inject.js","content/inject.js","note.html","popup/script.js","http://ec2-52-15-84-235.us-east-2.compute.amazonaws.com/chromeExtension/public/","localhost/Chevereto/*","localhost/*"]
 }

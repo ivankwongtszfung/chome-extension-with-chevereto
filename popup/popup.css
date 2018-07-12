@@ -1,0 +1,17 @@
+div{
+	white-space:nowrap;
+}
+
+button,table{
+	width:100%;
+	float:left;
+}
+a{
+	display: block;
+	white-space:nowrap;
+	overflow: hidden;
+    text-overflow: ellipsis;
+}
+div#container,div#dropdown{
+	width:auto;
+}
